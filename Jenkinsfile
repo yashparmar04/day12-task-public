@@ -10,6 +10,7 @@ pipeline {
             steps {
                 // Checkout code from GitHub repository
                 git url: 'https://github.com/nkheria/DevOpsClassCodes.git', branch: 'master'
+            }
         }
 
         stage('Build') {
