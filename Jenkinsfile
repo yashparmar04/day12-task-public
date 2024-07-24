@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        MAVEN_HOME = tool 'Maven-3.9.0' // Using the specified Maven tool name
+        MAVEN_HOME = tool 'maven-3.9.0' // Ensure this matches your Maven tool name
     }
 
     stages {
@@ -17,8 +17,8 @@ pipeline {
             steps {
                 // Build the project using Maven
                 script {
-                    withEnv(["PATH+MAVEN=${MAVEN_HOME}/bin"]) {
-                        sh 'mvn clean package'
+                    withEnv(["PATH+MAVEN=${MAVEN_HOME}\\bin"]) {
+                        bat 'mvn clean package'
                     }
                 }
             }
