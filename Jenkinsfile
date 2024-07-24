@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        MAVEN_HOME = tool 'maven-3.9.0' // Ensure this matches your Maven tool name
+        MAVEN_HOME = tool 'Maven-3.9.0' // Ensure this matches your Maven tool name
     }
 
     stages {
